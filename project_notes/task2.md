@@ -48,4 +48,83 @@ nd032-c3-asynchronous-programming-with-javascript-project-starter/src
     └── index.js
 ```
     
+ ### server/index.js
+- [x] Change the port from `3000` to `8080`
+- [x] Path for `public`
+- [x] Route for `/`
+- [x] Route for `/race`
+
+### client/pages/home.html
+- [x] Links to CSS
+- [x] Displays home page which is shown on load
+- [x] Contains button which takes you to race.html onClick `<a class="button" href="/race">Start My Race</a>`
+
+### client/pages/progress.html
+- [x] Links to CSS
+- [x] Links to  /assets/javascript/index.js
+- [x] Displays leadeboard in thr form of a HTML table 
+- [x] Contains gas peddle button 
+   ```
+    <section id="accelerate">
+            <button id="gas-peddle">Click Me Fast!</button>
+        </section>
+    ```
     
+### client/pages/race.html
+- [x] Links to CSS
+- [x] Links to  /assets/javascript/index.js
+- [x] Displays form to allow user to select track and racer
+- [x] Contains form submit button  `<button class="button" type="submit" id="submit-create-race">Start Race</button>`
+
+### client/pages/results.html
+- [x] Links to CSS
+- [x] Links to  /assets/javascript/index.js
+- [x] Basic template for displaying results, no structure only 2 headers
+
+### client/assets/javascript/index.js
+
+- [x]  Object: store
+- [x]  function: document.addEventListener("DOMContentLoaded", function())- wait until the DOM is loaded the call -> onPageLoad() & setUpClickHandlers()
+**we are here on the code walk through**
+
+- [ ]  async function: onPageLoad()
+- [ ]  function: setupClickHandlers()
+- [ ]  async function: delay(ms)
+- [ ]  async function: handleCreateRace()
+- [ ]  function: runRace(raceID)
+- [ ]  async function: runCountdown()
+- [ ]  function: handleSelectPodRacer(target)
+- [ ]  function: handleSelectTrack(target)
+- [ ]  function: handleAccelerate()
+- [ ]  function: renderRacerCars(racers)
+- [ ]  function: renderRacerCard(racer)
+- [ ]  function: renderTrackCards(tracks)
+- [ ]  function: renderTrackCard(track)
+- [ ]  function: renderCountdown(count)
+- [ ]  function: renderRaceStartView(track, racers)
+- [ ]  function: resultsView(positions)
+- [ ]  function: renderAt(element, html)
+- [ ]  const: const SERVER = 'http://localhost:8080'
+- [ ]  function: getTracks()
+- [ ]  function:  getRacers()
+- [ ]  function: createRace(player_id, track_id)
+- [ ]  function: getRace(id)
+- [ ]  function: startRace(id)
+- [ ]  function: accelerate(id)
+
+
+
+
+
+
+
+ Change the port from 3000 to 8080
+ Object: store
+ root element
+ function: updateStore -> render()
+ function: render -> App()
+ const App: anon function -> Greeting(), ImageOfTheDay()
+ function: window.addEventListener(load)
+ function: Greeting(name)
+ function: ImageOfTheDay() -> getImageOfTheDay()
+ function: getImageOfTheDay()
