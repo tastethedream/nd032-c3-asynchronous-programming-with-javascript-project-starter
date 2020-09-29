@@ -13,16 +13,11 @@
 - [x] Start server (API)
 - [x] Start server (Localhost:8080)
 
-
-
-
-
-
-
 ## Task 2 - Architecture
-- [ ] Breakdown the architecture
+- [x] Breakdown the architecture
+- [x] Code walk through
 - [ ] Draw a diagram overview
 
-## Task 3 - 
+## Task 3 - API calls
 
 ## Task 4 - 
