@@ -5,13 +5,13 @@
  Get a NASA developer API key
 
 ## Task 1 - Initialise the environment
-- [ ] Fork the udacity repo
-- [ ] Clone the udacity repo
-- [ ] create new branch for development
-- [ ] Check you have all expected files
-- [ ] Change ports to 8080
-- [ ] Start server (API)
-- [ ] Start server (Localhost:8080)
+- [x] Fork the udacity repo
+- [x] Clone the udacity repo
+- [x] create new branch for development
+- [x] Check you have all expected files
+- [x] Change ports to 8080
+- [x] Start server (API)
+- [x] Start server (Localhost:8080)
 
 
 
