@@ -305,7 +305,7 @@ function renderAt(element, html) {
 
 // API CALLS ------------------------------------------------
 
-const SERVER = 'http://localhost:8000'
+const SERVER = 'http://localhost:8080'
 
 function defaultFetchOpts() {
 	return {
