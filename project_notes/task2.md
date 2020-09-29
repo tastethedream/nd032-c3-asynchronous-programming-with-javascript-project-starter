@@ -85,26 +85,28 @@ nd032-c3-asynchronous-programming-with-javascript-project-starter/src
 
 - [x]  Object: store
 - [x]  function: document.addEventListener("DOMContentLoaded", function())- wait until the DOM is loaded the call -> onPageLoad() & setUpClickHandlers()
-**we are here on the code walk through**
+- [ ]  async function: onPageLoad() -> getTracks() & getRacers()
+- [ ]  function: setupClickHandlers() - eventListener for html form (see diagram??) **diagram needed**
+- [ ]  async function: delay(ms) - try/catch setTimeOut()
+- [ ]  async function: handleCreateRace() -> renderAt() This async function controls the flow of the race, add the logic and error handling**action required see task ?? for breakdown**
+- [ ]  function: runRace(raceID) ?? unsure of this function **action required see task ?? for breakdown**
+- [ ]  async function: runCountdown() try/catch to create a delay for DOM to load **action required see task ?? for breakdown**
+- [ ]  function: handleSelectPodRacer(target) remove class selected from all racer options **action required see task ?? for breakdown**
+- [ ]  function: handleSelectTrack(target) **action required see task ?? for breakdown**
+- [ ]  function: handleAccelerate() invoke API to call accelerate() **action required see task ?? for breakdown**
 
-- [ ]  async function: onPageLoad()
-- [ ]  function: setupClickHandlers()
-- [ ]  async function: delay(ms)
-- [ ]  async function: handleCreateRace()
-- [ ]  function: runRace(raceID)
-- [ ]  async function: runCountdown()
-- [ ]  function: handleSelectPodRacer(target)
-- [ ]  function: handleSelectTrack(target)
-- [ ]  function: handleAccelerate()
-- [ ]  function: renderRacerCars(racers)
+### HTML views
+- [ ]  function: renderRacerCars(racers) 
 - [ ]  function: renderRacerCard(racer)
 - [ ]  function: renderTrackCards(tracks)
 - [ ]  function: renderTrackCard(track)
 - [ ]  function: renderCountdown(count)
 - [ ]  function: renderRaceStartView(track, racers)
 - [ ]  function: resultsView(positions)
-- [ ]  function: renderAt(element, html)
-- [ ]  const: const SERVER = 'http://localhost:8080'
+- [ ]  function: renderAt(element, html) - renders starting UI
+
+### API calls
+- [ ]  const: const SERVER = 'http://localhost:8080' **action required see task ?? for breakdown**
 - [ ]  function: getTracks()
 - [ ]  function:  getRacers()
 - [ ]  function: createRace(player_id, track_id)
@@ -118,13 +120,4 @@ nd032-c3-asynchronous-programming-with-javascript-project-starter/src
 
 
 
- Change the port from 3000 to 8080
- Object: store
- root element
- function: updateStore -> render()
- function: render -> App()
- const App: anon function -> Greeting(), ImageOfTheDay()
- function: window.addEventListener(load)
- function: Greeting(name)
- function: ImageOfTheDay() -> getImageOfTheDay()
- function: getImageOfTheDay()
+
