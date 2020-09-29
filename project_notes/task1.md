@@ -39,7 +39,7 @@ src/server/index.js and src/client/assets/javascript/index.js
 
 if set up correctly you will see the following
 
-![Working environment](project_notes/images/task1_initial_screen.png "Udaciracer Setup")
+![Working environment](https://github.com/tastethedream/nd032-c3-asynchronous-programming-with-javascript-project-starter/blob/development/project_notes/images/task1_initial_screen.png "Udaciracer Setup")
 
 
 
