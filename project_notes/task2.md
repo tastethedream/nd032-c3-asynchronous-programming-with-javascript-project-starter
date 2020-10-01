@@ -114,6 +114,9 @@ nd032-c3-asynchronous-programming-with-javascript-project-starter/src
 - [ ]  function: startRace(id)
 - [ ]  function: accelerate(id)
 
+### Top level overview of game
+
+![Game flow Overview](https://github.com/tastethedream/nd032-c3-asynchronous-programming-with-javascript-project-starter/blob/development/project_notes/images/task2-top-level-diagram.png)
 
 
 
