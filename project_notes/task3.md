@@ -2,6 +2,9 @@
 
 ## API Endpoints
 
+### To read taken from udacity project notes
+
+
 To complete the project you must first create the calls to the API. These will all be fetch requests, and all information needed to create the request is provided in the instructions. The API calls are all at the bottom of the file: `src/client/assets/javascript/index.js.`
 
 Below are a list of the API endpoints and the shape of the data they return. These are all of the endpoints you need to complete the game. Consult this information often as you complete the project:
@@ -43,3 +46,16 @@ Returns nothing
 
 To complete the race logic, find all the TODO tags in index.js and read the instructions.
 
+### 3.1 Server/index.js Routes
+
+Reacreate the route you were given for `/home` and `/race` for the remaining HTML partials
+
+```
+app.get('/race', async (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/pages/race.html'));
+})
+```
+
+### 3.2 API calls assests/javascript/index.js
+
+Using the end points given in the reading material above - create the required API calls 
