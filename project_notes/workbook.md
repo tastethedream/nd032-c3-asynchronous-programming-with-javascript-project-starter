@@ -1,9 +1,5 @@
  # Workbook for Udaciracer project
  
- Fork the original Mars Dashboard Repo
- Ensure yarn is available on the development machine
- Get a NASA developer API key
-
 ## Task 1 - Initialise the environment
 - [x] Fork the udacity repo
 - [x] Clone the udacity repo
@@ -16,8 +12,15 @@
 ## Task 2 - Architecture
 - [x] Breakdown the architecture
 - [x] Code walk through
-- [ ] Draw a diagram overview
+- [x] Draw a top level diagram overview
 
 ## Task 3 - API calls
+
+- [ ] Read through the instructions for the API calls
+- [ ] Examine the fetch in server/index.js
+- [ ] Examine the fetches in client/assests.javascript/index.js
+- [ ] Draw a top level diagram overview
+- [ ] recreate the existing fetch for the others needed
+- [ ] test the new fetches
 
 ## Task 4 - 
