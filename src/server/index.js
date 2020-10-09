@@ -15,6 +15,8 @@ app.use(bodyParser.json())
 app.use('/', express.static(path.join(__dirname, '../client')))
 
 // API calls ------------------------------------------------------------------------------------
+
+
 app.get('/', async (req, res) => {
     res.sendFile(path.join(__dirname, '../client/pages/home.html'));
 })
@@ -31,4 +33,4 @@ app.get('/results', async (req, res) => {
     res.sendFile(path.join(__dirname, '../client/pages/results.html'));
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`You are live on port ${port}!`))
