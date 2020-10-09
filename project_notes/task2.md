@@ -86,7 +86,7 @@ nd032-c3-asynchronous-programming-with-javascript-project-starter/src
 - [x]  Object: store
 - [x]  function: document.addEventListener("DOMContentLoaded", function())- wait until the DOM is loaded the call -> onPageLoad() & setUpClickHandlers()
 - [ ]  async function: onPageLoad() -> getTracks() & getRacers()
-- [ ]  function: setupClickHandlers() - eventListener for html form (see diagram??) **diagram needed**
+- [x]  function: setupClickHandlers() - eventListener for html form (see diagram??) **diagram needed**
 - [ ]  async function: delay(ms) - try/catch setTimeOut()
 - [ ]  async function: handleCreateRace() -> renderAt() This async function controls the flow of the race, add the logic and error handling**action required see task ?? for breakdown**
 - [ ]  function: runRace(raceID) ?? unsure of this function **action required see task ?? for breakdown**
@@ -106,13 +106,13 @@ nd032-c3-asynchronous-programming-with-javascript-project-starter/src
 - [ ]  function: renderAt(element, html) - renders starting UI
 
 ### API calls
-- [ ]  const: const SERVER = 'http://localhost:8080' **action required see task ?? for breakdown**
-- [ ]  function: getTracks()
-- [ ]  function:  getRacers()
-- [ ]  function: createRace(player_id, track_id)
-- [ ]  function: getRace(id)
-- [ ]  function: startRace(id)
-- [ ]  function: accelerate(id)
+- [x]  const: const SERVER = 'http://localhost:8080' **action required see task ?? for breakdown**
+- [x]  function: getTracks()
+- [x]  function:  getRacers()
+- [x]  function: createRace(player_id, track_id)
+- [x]  function: getRace(id)
+- [x]  function: startRace(id)
+- [x]  function: accelerate(id)
 
 ### Top level overview of game
 
