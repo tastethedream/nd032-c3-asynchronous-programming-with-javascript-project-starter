@@ -77,20 +77,33 @@ async function delay(ms) {
 // This async function controls the flow of the race, add the logic and error handling
 async function handleCreateRace() {
 	// render starting UI
-	renderAt('#race', renderRaceStartView())
+	renderAt('#race', renderRaceStartView(store.track_id))
 
 	// TODO - Get player_id and track_id from the store
+
+	let track_id = store.track_id
+	let player_id = store.player_id
 	
-	// const race = TODO - invoke the API call to create the race, then save the result
+	// TODO - invoke the API call to create the race, then save the result
+
+	const race = await createRace(player_id, track_id)
 
 	// TODO - update the store with the race id
+
+	store.race_id = target.ID;
 
 	// The race has been created, now start the countdown
 	// TODO - call the async function runCountdown
 
+	await runCountdown()
+
 	// TODO - call the async function startRace
 
+	await startRace(store.race_id)
+
 	// TODO - call the async function runRace
+
+	await runRace(store.race_id)
 }
 
 function runRace(raceID) {
@@ -123,14 +136,24 @@ async function runCountdown() {
 		return new Promise(resolve => {
 			// TODO - use Javascript's built in setInterval method to count down once per second
 
+		 setInterval(() => {
+			 if (timer > 0) {
+
 			// run this DOM manipulation to decrement the countdown for the user
 			document.getElementById('big-numbers').innerHTML = --timer
 
 			// TODO - if the countdown is done, clear the interval, resolve the promise, and return
 
+			 } else {
+				 clearInterval()
+				 resolve()
+			 }
+
+		}, 1000)
+
 		})
 	} catch(error) {
-		console.log(error);
+		console.log("Problem with runCountdown request::", err.message);
 	}
 }
 
@@ -394,7 +417,8 @@ async function getRace(id) {
 	}
 
 function startRace(id) {
-	return fetch(`${SERVER}/api/races/${id}/start`, {
+	const amendId = parseInt(id) - 1
+	return fetch(`${SERVER}/api/races/${amendId}/start`, {
 		method: 'POST',
 		...defaultFetchOpts(),
 	})
