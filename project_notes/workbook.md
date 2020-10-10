@@ -42,16 +42,16 @@
 
 ## Task 6 - create the race
 
-- [ ] render starting UI `handleCreateRace()`
-        `renderAt('#race', renderRaceStartView())`    **amend This**
-
-
+- [x] render starting UI `handleCreateRace()`
+        `renderAt('#race', renderRaceStartView())`  
 
 - [ ] invoke API to create race and save result `const race =`
-- [ ] Update store with race id
-        `store.track_id = target.id;`
+- [x] Update store with race id
+        `let track_id = store.track_id;`
 
-- [ ] Look at `start race` button on click?????
+- [x] Update store with race_id
+
+        `store.race_id = target.id;`
 
 
 ## Task 7 - The Countdown
