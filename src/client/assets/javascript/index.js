@@ -76,35 +76,46 @@ async function delay(ms) {
 
 // This async function controls the flow of the race, add the logic and error handling
 async function handleCreateRace() {
+
 	// render starting UI
 	renderAt('#race', renderRaceStartView(store.track_id))
+	
+	try {
+		// TODO - Get player_id and track_id from the store
+		const track_id = store
+		const player_id = store
 
-	// TODO - Get player_id and track_id from the store
-
-	let track_id = store.track_id
-	let player_id = store.player_id
+	// if(track_id === undefined || player_id === undefined){
+	// 	alert("Please select a track and racer before you start the race!");
+	// 	return;
+	// } else {
 	
 	// TODO - invoke the API call to create the race, then save the result
 
-	const race = await createRace(player_id, track_id)
+		const race = await createRace(player_id, track_id)
 
 	// TODO - update the store with the race id
 
-	store.race_id = target.ID;
+		store.race_id = race.id;
 
 	// The race has been created, now start the countdown
 	// TODO - call the async function runCountdown
 
-	await runCountdown()
+		await runCountdown()
 
 	// TODO - call the async function startRace
 
-	await startRace(store.race_id)
+		await startRace(store.race_id)
 
 	// TODO - call the async function runRace
 
-	await runRace(store.race_id)
+		await runRace(store.race_id)
+
+} catch (err){
+	console.log("Cannot create race", err);
+	}
 }
+
 
 function runRace(raceID) {
 	return new Promise(resolve => {
@@ -116,6 +127,12 @@ function runRace(raceID) {
 		renderAt('#leaderBoard', raceProgress(res.positions))
 	*/
 
+	let raceInterval = setInterval(async() => {
+		await getRace(raceID).then(result =>{
+			if(result.status !== 'finished'){
+				renderAt('#leaderboard', raceProgress(result.positions))
+	
+			} else {
 	/* 
 		TODO - if the race info status property is "finished", run the following:
 
@@ -123,7 +140,18 @@ function runRace(raceID) {
 		renderAt('#race', resultsView(res.positions)) // to render the results view
 		reslove(res) // resolve the promise
 	*/
-	})
+	
+	// remember to add error handling for the Promise
+
+				clearInterval(raceInterval)
+				renderAt('#race', resultsView(result.positions))
+				resolve(result)
+			}
+		});
+	}, 500)
+});
+
+	
 	// remember to add error handling for the Promise
 }
 
@@ -145,13 +173,14 @@ async function runCountdown() {
 			// TODO - if the countdown is done, clear the interval, resolve the promise, and return
 
 			 } else {
+
 				 clearInterval()
 				 resolve()
 			 }
 
 		}, 1000)
 
-		})
+})
 	} catch(error) {
 		console.log("Problem with runCountdown request::", err.message);
 	}
@@ -345,22 +374,6 @@ function defaultFetchOpts() {
 }
 
 // TODO - Make a fetch call (with error handling!) to each of the following API endpoints 
-
- 	
-// function getTracks() {
-// 	// GET request to `${SERVER}/api/tracks`
-// 	return fetch(`${SERVER}/api/tracks`, { ...defaultFetchOpts() })
-// 	  .then((res) => res.json())
-// 	  .catch((err) => console.log("Problem with getTracks request::", err));
-//   }
-  
-//   function getRacers() {
-// 	// GET request to `${SERVER}/api/cars`
-// 	return fetch(`${SERVER}/api/cars`, { ...defaultFetchOpts() })
-// 	  .then((res) => res.json())
-// 	  .catch((err) => console.log("Problem with getRacers request::", err));
-//  }
-
 
  async function getTracks() {
 	// GET request to `${SERVER}/api/tracks`
