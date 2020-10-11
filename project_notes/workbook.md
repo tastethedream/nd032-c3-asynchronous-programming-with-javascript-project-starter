@@ -45,14 +45,52 @@
 - [x] render starting UI `handleCreateRace()`
         `renderAt('#race', renderRaceStartView())`  
 
-- [ ] invoke API to create race and save result `const race =`
+- [x] invoke API to create race and save result `const race =`
 - [x] Update store with race id
         `let track_id = store.track_id;`
 
 - [x] Update store with race_id
 
-        `store.race_id = target.id;`
+     `store race_id = target.ID`
 
+- [x] Create alert to notify user they have not made their selections
+
+- [ ] Ensure selected race is shown in header 
+        Issue here track.name always shows as track 1???
 
 ## Task 7 - The Countdown
 
+- [x] call the async functions runCountdown(), startRace() and runRace()
+- [x] setInterval() to countdown once per second `runCountdown()`
+```Invoke the API call to accelerate	 setInterval(() => {
+		 if (timer > 0) {
+```
+
+- [x] When countdown complete clear interval 
+        `clearInterval()`
+- [x] Resolve promise and return
+        `resolve()`
+		
+
+## Task 8 - runRace()
+
+- [x] setInterval() to get race info every 500ms
+	`const interval = setInterval(async () => {`
+- [x] Update the leaderboard if the race is in progress
+- [x] When race complete stop interval from repeating
+        ` clearInterval(interval);`
+- [x] Render results
+        ` renderAt("#race", resultsView(raceInfo.positions));`
+
+## Task 9 - handleAccelerate()
+
+- [x] Invoke the API call to accelerate
+```
+	try{
+		await accelerate(store.race_id)
+	} catch(error) {
+		console.log("Problem with handleCountdown:", error.message);
+
+	}
+}
+```
