@@ -2,7 +2,7 @@
 
 /* -------------------  MOBILE  --------------------- */
 header {
-  background-image: url('https://via.placeholder.com/1150');
+  background-image: url('images/selectionscreen.jpg');
 }
 
 main#two-columns {
@@ -19,14 +19,14 @@ section#accelerate button {
     width: 300px;
     margin: 30px auto;
     border-radius: 180%;
-    background-color: green;
-    border-color: rgb(14, 166, 6);
+    background-color: darkcyan;
+    border-color: darkcyan;
     cursor: pointer;
 }
 
 #big-numbers {
     font-weight: bolder;
-    font-size: 70px;
+    font-size: 200px;
 }
 
 /* -------------------  TABLET  --------------------- */
